@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var topStackView: UIStackView!
+    @IBOutlet weak var treeImageView: UIImageView!
+    @IBOutlet weak var correctWordLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,12 @@ class ViewController: UIViewController {
             {
                 topStackView.axis = .horizontal
             }
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton)
+    {
+        print(sender.currentTitle ?? "nil")
+        sender.isEnabled = false
     }
 }
 
